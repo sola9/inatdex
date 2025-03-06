@@ -425,6 +425,9 @@ class iNatdexWidget(QtWidgets.QScrollArea):
         #next step is to refresh the buttons.
         self.deleteTaxonGrid()
         self.createTaxonGrid()
+        #then refresh the progress bar & its text
+        self.updateProgressBar()
+        
 
     def unregRegClicked(self):
         #disables the buttons so they can't be clicked
@@ -441,7 +444,15 @@ class iNatdexWidget(QtWidgets.QScrollArea):
         #next step is to refresh the buttons.
         self.deleteTaxonGrid()
         self.createTaxonGrid()
-        
+        #then refresh the progress bar & its text
+        self.updateProgressBar()
+
+    #updates the progress bar & its text
+    def updateProgressBar(self):
+        reg_count = count_registered_taxa()
+        self.progressText.setText("["+str(reg_count)+"/"+str(len(taxonInformation))+"]")
+        self.progressBar.setValue(reg_count)
+    
     #creates the grid of buttons representing the inatdex
     def createTaxonGrid(self):
         count_of_squares = 0
