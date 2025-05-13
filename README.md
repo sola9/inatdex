@@ -10,4 +10,4 @@ pip install pyinaturalist
 pip install pyqt6
 ```
 <br>
-With these installed, you should be able to run inatdex.py. Further details on using inatdex can be found in instructions.pdf
+With these installed, you should be able to start iNatdex by running main.py. Further details on using inatdex can be found in instructions.pdf
