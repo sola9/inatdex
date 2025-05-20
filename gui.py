@@ -271,7 +271,7 @@ class iNatdexWidget(QtWidgets.QScrollArea):
                 commonName = dex.taxonInformation[count_of_squares][2]
                 sciName = dex.taxonInformation[count_of_squares][1]
                 currButt = QtWidgets.QPushButton(commonName+"\n"+sciName)
-                if(dex.taxonInformation[count_of_squares][4]=="registered"):
+                if(dex.taxonInformation[count_of_squares][5]=="registered"):
                     currButt.setStyleSheet("background-color : #74ac00")
                 self.taxaLayout.addWidget(currButt,i,j)
                 count_of_squares+=1
